@@ -23,3 +23,9 @@ jobs:
         timeout_minutes: 4
         max_attempts: 2
         command: gradle build
+
+    - name: Upload Build Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: TitleAnnouncer-jar
+        path: build/libs/*.jar
